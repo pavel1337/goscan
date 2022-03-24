@@ -193,7 +193,7 @@ func scanport(ip string, port int, timeout time.Duration) bool {
 
 		if !strings.Contains(err.Error(), "connection refused") &&
 			!strings.Contains(err.Error(), "i/o timeout") {
-			fmt.Println(err)
+			continue
 		}
 
 	}
